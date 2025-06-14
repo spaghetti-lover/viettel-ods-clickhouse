@@ -1,0 +1,13 @@
+[2025-06-14T01:59:46.572+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ecommerce_generate_province_and_city.generate_provinces_info manual__2025-06-14T01:59:44.338717+00:00 [queued]>
+[2025-06-14T01:59:46.586+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ecommerce_generate_province_and_city.generate_provinces_info manual__2025-06-14T01:59:44.338717+00:00 [queued]>
+[2025-06-14T01:59:46.586+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 2
+[2025-06-14T01:59:46.608+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): generate_provinces_info> on 2025-06-14 01:59:44.338717+00:00
+[2025-06-14T01:59:46.617+0000] {standard_task_runner.py:57} INFO - Started process 970 to run task
+[2025-06-14T01:59:46.620+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'ecommerce_generate_province_and_city', 'generate_provinces_info', 'manual__2025-06-14T01:59:44.338717+00:00', '--job-id', '416', '--raw', '--subdir', 'DAGS_FOLDER/generate_province_and_city.py', '--cfg-path', '/tmp/tmpxsbkjhzc']
+[2025-06-14T01:59:46.623+0000] {standard_task_runner.py:85} INFO - Job 416: Subtask generate_provinces_info
+[2025-06-14T01:59:46.770+0000] {task_command.py:415} INFO - Running <TaskInstance: ecommerce_generate_province_and_city.generate_provinces_info manual__2025-06-14T01:59:44.338717+00:00 [running]> on host 3498b866135e
+[2025-06-14T01:59:47.152+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='ecommerce_generate_province_and_city' AIRFLOW_CTX_TASK_ID='generate_provinces_info' AIRFLOW_CTX_EXECUTION_DATE='2025-06-14T01:59:44.338717+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-14T01:59:44.338717+00:00'
+[2025-06-14T01:59:47.266+0000] {python.py:194} INFO - Done. Returned value was: None
+[2025-06-14T01:59:47.305+0000] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=ecommerce_generate_province_and_city, task_id=generate_provinces_info, execution_date=20250614T015944, start_date=20250614T015946, end_date=20250614T015947
+[2025-06-14T01:59:47.364+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-06-14T01:59:47.426+0000] {taskinstance.py:2776} INFO - 1 downstream tasks scheduled from follow-on schedule check

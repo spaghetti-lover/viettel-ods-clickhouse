@@ -1,0 +1,13 @@
+[2025-06-13T15:55:57.063+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ecommerce_generate_order_process.generate_transaction_for_order scheduled__2025-06-13T15:49:24.365447+00:00 [queued]>
+[2025-06-13T15:55:57.078+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ecommerce_generate_order_process.generate_transaction_for_order scheduled__2025-06-13T15:49:24.365447+00:00 [queued]>
+[2025-06-13T15:55:57.079+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 6
+[2025-06-13T15:55:57.099+0000] {taskinstance.py:1380} INFO - Executing <Task(_PythonDecoratedOperator): generate_transaction_for_order> on 2025-06-13 15:49:24.365447+00:00
+[2025-06-13T15:55:57.107+0000] {standard_task_runner.py:57} INFO - Started process 693 to run task
+[2025-06-13T15:55:57.111+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'ecommerce_generate_order_process', 'generate_transaction_for_order', 'scheduled__2025-06-13T15:49:24.365447+00:00', '--job-id', '41', '--raw', '--subdir', 'DAGS_FOLDER/generate_order_process.py', '--cfg-path', '/tmp/tmpm90djefz']
+[2025-06-13T15:55:57.114+0000] {standard_task_runner.py:85} INFO - Job 41: Subtask generate_transaction_for_order
+[2025-06-13T15:55:57.288+0000] {task_command.py:415} INFO - Running <TaskInstance: ecommerce_generate_order_process.generate_transaction_for_order scheduled__2025-06-13T15:49:24.365447+00:00 [running]> on host 3498b866135e
+[2025-06-13T15:55:57.720+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='ecommerce_generate_order_process' AIRFLOW_CTX_TASK_ID='generate_transaction_for_order' AIRFLOW_CTX_EXECUTION_DATE='2025-06-13T15:49:24.365447+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-06-13T15:49:24.365447+00:00'
+[2025-06-13T15:55:57.772+0000] {python.py:194} INFO - Done. Returned value was: None
+[2025-06-13T15:55:57.803+0000] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=ecommerce_generate_order_process, task_id=generate_transaction_for_order, execution_date=20250613T154924, start_date=20250613T155557, end_date=20250613T155557
+[2025-06-13T15:55:57.844+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-06-13T15:55:57.897+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check

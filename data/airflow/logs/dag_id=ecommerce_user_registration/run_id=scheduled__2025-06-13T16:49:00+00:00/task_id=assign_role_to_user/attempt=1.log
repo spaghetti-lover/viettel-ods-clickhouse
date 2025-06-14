@@ -1,0 +1,13 @@
+[2025-06-13T16:50:04.100+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ecommerce_user_registration.assign_role_to_user scheduled__2025-06-13T16:49:00+00:00 [queued]>
+[2025-06-13T16:50:04.113+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ecommerce_user_registration.assign_role_to_user scheduled__2025-06-13T16:49:00+00:00 [queued]>
+[2025-06-13T16:50:04.114+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 4
+[2025-06-13T16:50:04.135+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): assign_role_to_user> on 2025-06-13 16:49:00+00:00
+[2025-06-13T16:50:04.143+0000] {standard_task_runner.py:57} INFO - Started process 5457 to run task
+[2025-06-13T16:50:04.147+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'ecommerce_user_registration', 'assign_role_to_user', 'scheduled__2025-06-13T16:49:00+00:00', '--job-id', '323', '--raw', '--subdir', 'DAGS_FOLDER/user_registretion.py', '--cfg-path', '/tmp/tmp87tm8pe3']
+[2025-06-13T16:50:04.150+0000] {standard_task_runner.py:85} INFO - Job 323: Subtask assign_role_to_user
+[2025-06-13T16:50:04.264+0000] {task_command.py:415} INFO - Running <TaskInstance: ecommerce_user_registration.assign_role_to_user scheduled__2025-06-13T16:49:00+00:00 [running]> on host 3498b866135e
+[2025-06-13T16:50:04.510+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='ecommerce_user_registration' AIRFLOW_CTX_TASK_ID='assign_role_to_user' AIRFLOW_CTX_EXECUTION_DATE='2025-06-13T16:49:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-06-13T16:49:00+00:00'
+[2025-06-13T16:50:04.546+0000] {python.py:194} INFO - Done. Returned value was: None
+[2025-06-13T16:50:04.582+0000] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=ecommerce_user_registration, task_id=assign_role_to_user, execution_date=20250613T164900, start_date=20250613T165004, end_date=20250613T165004
+[2025-06-13T16:50:04.639+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-06-13T16:50:04.699+0000] {taskinstance.py:2776} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,264 @@
+[2025-06-13T13:15:45.735+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ecommerce_generate_product.check_brand_generator_success scheduled__2025-06-01T00:00:00+00:00 [queued]>
+[2025-06-13T13:15:45.762+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ecommerce_generate_product.check_brand_generator_success scheduled__2025-06-01T00:00:00+00:00 [queued]>
+[2025-06-13T13:15:45.763+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 6
+[2025-06-13T13:15:45.846+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): check_brand_generator_success> on 2025-06-01 00:00:00+00:00
+[2025-06-13T13:15:45.900+0000] {standard_task_runner.py:57} INFO - Started process 251 to run task
+[2025-06-13T13:15:45.908+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'ecommerce_generate_product', 'check_brand_generator_success', 'scheduled__2025-06-01T00:00:00+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/generate_product.py', '--cfg-path', '/tmp/tmpd33nedv1']
+[2025-06-13T13:15:45.913+0000] {standard_task_runner.py:85} INFO - Job 6: Subtask check_brand_generator_success
+[2025-06-13T13:15:46.412+0000] {task_command.py:415} INFO - Running <TaskInstance: ecommerce_generate_product.check_brand_generator_success scheduled__2025-06-01T00:00:00+00:00 [running]> on host 1505abd3baf2
+[2025-06-13T13:15:47.050+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='ecommerce_generate_product' AIRFLOW_CTX_TASK_ID='check_brand_generator_success' AIRFLOW_CTX_EXECUTION_DATE='2025-06-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-06-01T00:00:00+00:00'
+[2025-06-13T13:15:47.230+0000] {taskinstance.py:1935} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/generate_product.py", line 16, in check_if_brand_generated_success
+    raise AirflowException("Brand generator DAG run was not successful.")
+airflow.exceptions.AirflowException: Brand generator DAG run was not successful.
+[2025-06-13T13:15:47.240+0000] {taskinstance.py:1398} INFO - Marking task as UP_FOR_RETRY. dag_id=ecommerce_generate_product, task_id=check_brand_generator_success, execution_date=20250601T000000, start_date=20250613T131545, end_date=20250613T131547
+[2025-06-13T13:15:47.290+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 6 for task check_brand_generator_success (Brand generator DAG run was not successful.; 251)
+[2025-06-13T13:15:47.334+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2025-06-13T13:15:47.520+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-06-13T13:19:00.822+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ecommerce_generate_product.check_brand_generator_success scheduled__2025-06-01T00:00:00+00:00 [queued]>
+[2025-06-13T13:19:00.862+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ecommerce_generate_product.check_brand_generator_success scheduled__2025-06-01T00:00:00+00:00 [queued]>
+[2025-06-13T13:19:00.863+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 6
+[2025-06-13T13:19:00.947+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): check_brand_generator_success> on 2025-06-01 00:00:00+00:00
+[2025-06-13T13:19:00.977+0000] {standard_task_runner.py:57} INFO - Started process 226 to run task
+[2025-06-13T13:19:00.987+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'ecommerce_generate_product', 'check_brand_generator_success', 'scheduled__2025-06-01T00:00:00+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/generate_product.py', '--cfg-path', '/tmp/tmphtqmmqb7']
+[2025-06-13T13:19:00.997+0000] {standard_task_runner.py:85} INFO - Job 6: Subtask check_brand_generator_success
+[2025-06-13T13:19:01.374+0000] {task_command.py:415} INFO - Running <TaskInstance: ecommerce_generate_product.check_brand_generator_success scheduled__2025-06-01T00:00:00+00:00 [running]> on host ad52f0edf798
+[2025-06-13T13:19:01.781+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='ecommerce_generate_product' AIRFLOW_CTX_TASK_ID='check_brand_generator_success' AIRFLOW_CTX_EXECUTION_DATE='2025-06-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-06-01T00:00:00+00:00'
+[2025-06-13T13:19:02.017+0000] {taskinstance.py:1935} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/generate_product.py", line 16, in check_if_brand_generated_success
+    raise AirflowException("Brand generator DAG run was not successful.")
+airflow.exceptions.AirflowException: Brand generator DAG run was not successful.
+[2025-06-13T13:19:02.026+0000] {taskinstance.py:1398} INFO - Marking task as UP_FOR_RETRY. dag_id=ecommerce_generate_product, task_id=check_brand_generator_success, execution_date=20250601T000000, start_date=20250613T131900, end_date=20250613T131902
+[2025-06-13T13:19:02.069+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 6 for task check_brand_generator_success (Brand generator DAG run was not successful.; 226)
+[2025-06-13T13:19:02.099+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2025-06-13T13:19:02.369+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-06-13T13:24:37.955+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ecommerce_generate_product.check_brand_generator_success scheduled__2025-06-01T00:00:00+00:00 [queued]>
+[2025-06-13T13:24:37.995+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ecommerce_generate_product.check_brand_generator_success scheduled__2025-06-01T00:00:00+00:00 [queued]>
+[2025-06-13T13:24:37.996+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 6
+[2025-06-13T13:24:38.043+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): check_brand_generator_success> on 2025-06-01 00:00:00+00:00
+[2025-06-13T13:24:38.085+0000] {standard_task_runner.py:57} INFO - Started process 227 to run task
+[2025-06-13T13:24:38.096+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'ecommerce_generate_product', 'check_brand_generator_success', 'scheduled__2025-06-01T00:00:00+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/generate_product.py', '--cfg-path', '/tmp/tmpdh_4vjat']
+[2025-06-13T13:24:38.102+0000] {standard_task_runner.py:85} INFO - Job 7: Subtask check_brand_generator_success
+[2025-06-13T13:24:38.351+0000] {task_command.py:415} INFO - Running <TaskInstance: ecommerce_generate_product.check_brand_generator_success scheduled__2025-06-01T00:00:00+00:00 [running]> on host 3ddb9b5ffd69
+[2025-06-13T13:24:38.904+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='ecommerce_generate_product' AIRFLOW_CTX_TASK_ID='check_brand_generator_success' AIRFLOW_CTX_EXECUTION_DATE='2025-06-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-06-01T00:00:00+00:00'
+[2025-06-13T13:24:39.056+0000] {taskinstance.py:1935} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/generate_product.py", line 16, in check_if_brand_generated_success
+    raise AirflowException("Brand generator DAG run was not successful.")
+airflow.exceptions.AirflowException: Brand generator DAG run was not successful.
+[2025-06-13T13:24:39.064+0000] {taskinstance.py:1398} INFO - Marking task as UP_FOR_RETRY. dag_id=ecommerce_generate_product, task_id=check_brand_generator_success, execution_date=20250601T000000, start_date=20250613T132437, end_date=20250613T132439
+[2025-06-13T13:24:39.122+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 7 for task check_brand_generator_success (Brand generator DAG run was not successful.; 227)
+[2025-06-13T13:24:39.183+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2025-06-13T13:24:39.367+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-06-13T13:35:44.588+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ecommerce_generate_product.check_brand_generator_success scheduled__2025-06-01T00:00:00+00:00 [queued]>
+[2025-06-13T13:35:44.614+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ecommerce_generate_product.check_brand_generator_success scheduled__2025-06-01T00:00:00+00:00 [queued]>
+[2025-06-13T13:35:44.615+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 6
+[2025-06-13T13:35:44.657+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): check_brand_generator_success> on 2025-06-01 00:00:00+00:00
+[2025-06-13T13:35:44.673+0000] {standard_task_runner.py:57} INFO - Started process 223 to run task
+[2025-06-13T13:35:44.685+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'ecommerce_generate_product', 'check_brand_generator_success', 'scheduled__2025-06-01T00:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/generate_product.py', '--cfg-path', '/tmp/tmpbyll83ug']
+[2025-06-13T13:35:44.689+0000] {standard_task_runner.py:85} INFO - Job 3: Subtask check_brand_generator_success
+[2025-06-13T13:35:44.908+0000] {task_command.py:415} INFO - Running <TaskInstance: ecommerce_generate_product.check_brand_generator_success scheduled__2025-06-01T00:00:00+00:00 [running]> on host 76a309d19f9c
+[2025-06-13T13:35:45.278+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='ecommerce_generate_product' AIRFLOW_CTX_TASK_ID='check_brand_generator_success' AIRFLOW_CTX_EXECUTION_DATE='2025-06-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-06-01T00:00:00+00:00'
+[2025-06-13T13:35:45.416+0000] {taskinstance.py:1935} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/generate_product.py", line 16, in check_if_brand_generated_success
+    raise AirflowException("Brand generator DAG run was not successful.")
+airflow.exceptions.AirflowException: Brand generator DAG run was not successful.
+[2025-06-13T13:35:45.429+0000] {taskinstance.py:1398} INFO - Marking task as UP_FOR_RETRY. dag_id=ecommerce_generate_product, task_id=check_brand_generator_success, execution_date=20250601T000000, start_date=20250613T133544, end_date=20250613T133545
+[2025-06-13T13:35:45.468+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 3 for task check_brand_generator_success (Brand generator DAG run was not successful.; 223)
+[2025-06-13T13:35:45.521+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2025-06-13T13:35:45.600+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-06-13T13:41:48.683+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ecommerce_generate_product.check_brand_generator_success scheduled__2025-06-01T00:00:00+00:00 [queued]>
+[2025-06-13T13:41:48.709+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ecommerce_generate_product.check_brand_generator_success scheduled__2025-06-01T00:00:00+00:00 [queued]>
+[2025-06-13T13:41:48.710+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 6
+[2025-06-13T13:41:48.752+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): check_brand_generator_success> on 2025-06-01 00:00:00+00:00
+[2025-06-13T13:41:48.778+0000] {standard_task_runner.py:57} INFO - Started process 229 to run task
+[2025-06-13T13:41:48.784+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'ecommerce_generate_product', 'check_brand_generator_success', 'scheduled__2025-06-01T00:00:00+00:00', '--job-id', '8', '--raw', '--subdir', 'DAGS_FOLDER/generate_product.py', '--cfg-path', '/tmp/tmprwnjm_gc']
+[2025-06-13T13:41:48.802+0000] {standard_task_runner.py:85} INFO - Job 8: Subtask check_brand_generator_success
+[2025-06-13T13:41:49.001+0000] {task_command.py:415} INFO - Running <TaskInstance: ecommerce_generate_product.check_brand_generator_success scheduled__2025-06-01T00:00:00+00:00 [running]> on host 4821ab4d0de9
+[2025-06-13T13:41:49.332+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='ecommerce_generate_product' AIRFLOW_CTX_TASK_ID='check_brand_generator_success' AIRFLOW_CTX_EXECUTION_DATE='2025-06-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-06-01T00:00:00+00:00'
+[2025-06-13T13:41:49.493+0000] {taskinstance.py:1935} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/generate_product.py", line 16, in check_if_brand_generated_success
+    raise AirflowException("Brand generator DAG run was not successful.")
+airflow.exceptions.AirflowException: Brand generator DAG run was not successful.
+[2025-06-13T13:41:49.506+0000] {taskinstance.py:1398} INFO - Marking task as UP_FOR_RETRY. dag_id=ecommerce_generate_product, task_id=check_brand_generator_success, execution_date=20250601T000000, start_date=20250613T134148, end_date=20250613T134149
+[2025-06-13T13:41:49.537+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 8 for task check_brand_generator_success (Brand generator DAG run was not successful.; 229)
+[2025-06-13T13:41:49.569+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2025-06-13T13:41:49.716+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-06-13T13:48:47.399+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ecommerce_generate_product.check_brand_generator_success scheduled__2025-06-01T00:00:00+00:00 [queued]>
+[2025-06-13T13:48:47.421+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ecommerce_generate_product.check_brand_generator_success scheduled__2025-06-01T00:00:00+00:00 [queued]>
+[2025-06-13T13:48:47.422+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 6
+[2025-06-13T13:48:47.449+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): check_brand_generator_success> on 2025-06-01 00:00:00+00:00
+[2025-06-13T13:48:47.484+0000] {standard_task_runner.py:57} INFO - Started process 227 to run task
+[2025-06-13T13:48:47.496+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'ecommerce_generate_product', 'check_brand_generator_success', 'scheduled__2025-06-01T00:00:00+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/generate_product.py', '--cfg-path', '/tmp/tmpxnoae5n2']
+[2025-06-13T13:48:47.505+0000] {standard_task_runner.py:85} INFO - Job 4: Subtask check_brand_generator_success
+[2025-06-13T13:48:47.775+0000] {task_command.py:415} INFO - Running <TaskInstance: ecommerce_generate_product.check_brand_generator_success scheduled__2025-06-01T00:00:00+00:00 [running]> on host 9ee50315c50c
+[2025-06-13T13:48:48.058+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='ecommerce_generate_product' AIRFLOW_CTX_TASK_ID='check_brand_generator_success' AIRFLOW_CTX_EXECUTION_DATE='2025-06-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-06-01T00:00:00+00:00'
+[2025-06-13T13:48:48.233+0000] {taskinstance.py:1935} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/generate_product.py", line 16, in check_if_brand_generated_success
+    raise AirflowException("Brand generator DAG run was not successful.")
+airflow.exceptions.AirflowException: Brand generator DAG run was not successful.
+[2025-06-13T13:48:48.240+0000] {taskinstance.py:1398} INFO - Marking task as UP_FOR_RETRY. dag_id=ecommerce_generate_product, task_id=check_brand_generator_success, execution_date=20250601T000000, start_date=20250613T134847, end_date=20250613T134848
+[2025-06-13T13:48:48.268+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 4 for task check_brand_generator_success (Brand generator DAG run was not successful.; 227)
+[2025-06-13T13:48:48.284+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2025-06-13T13:48:48.416+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-06-13T13:51:17.132+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ecommerce_generate_product.check_brand_generator_success scheduled__2025-06-01T00:00:00+00:00 [queued]>
+[2025-06-13T13:51:17.153+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ecommerce_generate_product.check_brand_generator_success scheduled__2025-06-01T00:00:00+00:00 [queued]>
+[2025-06-13T13:51:17.153+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 6
+[2025-06-13T13:51:17.209+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): check_brand_generator_success> on 2025-06-01 00:00:00+00:00
+[2025-06-13T13:51:17.228+0000] {standard_task_runner.py:57} INFO - Started process 232 to run task
+[2025-06-13T13:51:17.240+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'ecommerce_generate_product', 'check_brand_generator_success', 'scheduled__2025-06-01T00:00:00+00:00', '--job-id', '10', '--raw', '--subdir', 'DAGS_FOLDER/generate_product.py', '--cfg-path', '/tmp/tmp73xu6eci']
+[2025-06-13T13:51:17.248+0000] {standard_task_runner.py:85} INFO - Job 10: Subtask check_brand_generator_success
+[2025-06-13T13:51:17.477+0000] {task_command.py:415} INFO - Running <TaskInstance: ecommerce_generate_product.check_brand_generator_success scheduled__2025-06-01T00:00:00+00:00 [running]> on host 17d15dd20887
+[2025-06-13T13:51:18.135+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='ecommerce_generate_product' AIRFLOW_CTX_TASK_ID='check_brand_generator_success' AIRFLOW_CTX_EXECUTION_DATE='2025-06-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-06-01T00:00:00+00:00'
+[2025-06-13T13:51:18.326+0000] {taskinstance.py:1935} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/generate_product.py", line 16, in check_if_brand_generated_success
+    raise AirflowException("Brand generator DAG run was not successful.")
+airflow.exceptions.AirflowException: Brand generator DAG run was not successful.
+[2025-06-13T13:51:18.333+0000] {taskinstance.py:1398} INFO - Marking task as UP_FOR_RETRY. dag_id=ecommerce_generate_product, task_id=check_brand_generator_success, execution_date=20250601T000000, start_date=20250613T135117, end_date=20250613T135118
+[2025-06-13T13:51:18.371+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 10 for task check_brand_generator_success (Brand generator DAG run was not successful.; 232)
+[2025-06-13T13:51:18.407+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2025-06-13T13:51:18.615+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-06-13T13:54:08.133+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ecommerce_generate_product.check_brand_generator_success scheduled__2025-06-01T00:00:00+00:00 [queued]>
+[2025-06-13T13:54:08.166+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ecommerce_generate_product.check_brand_generator_success scheduled__2025-06-01T00:00:00+00:00 [queued]>
+[2025-06-13T13:54:08.166+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 6
+[2025-06-13T13:54:08.241+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): check_brand_generator_success> on 2025-06-01 00:00:00+00:00
+[2025-06-13T13:54:08.260+0000] {standard_task_runner.py:57} INFO - Started process 228 to run task
+[2025-06-13T13:54:08.271+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'ecommerce_generate_product', 'check_brand_generator_success', 'scheduled__2025-06-01T00:00:00+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/generate_product.py', '--cfg-path', '/tmp/tmpjuu2s8xk']
+[2025-06-13T13:54:08.278+0000] {standard_task_runner.py:85} INFO - Job 6: Subtask check_brand_generator_success
+[2025-06-13T13:54:08.659+0000] {task_command.py:415} INFO - Running <TaskInstance: ecommerce_generate_product.check_brand_generator_success scheduled__2025-06-01T00:00:00+00:00 [running]> on host f1d84043854e
+[2025-06-13T13:54:09.493+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='ecommerce_generate_product' AIRFLOW_CTX_TASK_ID='check_brand_generator_success' AIRFLOW_CTX_EXECUTION_DATE='2025-06-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-06-01T00:00:00+00:00'
+[2025-06-13T13:54:09.692+0000] {taskinstance.py:1935} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/generate_product.py", line 16, in check_if_brand_generated_success
+    raise AirflowException("Brand generator DAG run was not successful.")
+airflow.exceptions.AirflowException: Brand generator DAG run was not successful.
+[2025-06-13T13:54:09.701+0000] {taskinstance.py:1398} INFO - Marking task as UP_FOR_RETRY. dag_id=ecommerce_generate_product, task_id=check_brand_generator_success, execution_date=20250601T000000, start_date=20250613T135408, end_date=20250613T135409
+[2025-06-13T13:54:09.737+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 6 for task check_brand_generator_success (Brand generator DAG run was not successful.; 228)
+[2025-06-13T13:54:09.805+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2025-06-13T13:54:09.924+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-06-13T14:02:30.679+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ecommerce_generate_product.check_brand_generator_success scheduled__2025-06-01T00:00:00+00:00 [queued]>
+[2025-06-13T14:02:30.764+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ecommerce_generate_product.check_brand_generator_success scheduled__2025-06-01T00:00:00+00:00 [queued]>
+[2025-06-13T14:02:30.765+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 6
+[2025-06-13T14:02:30.957+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): check_brand_generator_success> on 2025-06-01 00:00:00+00:00
+[2025-06-13T14:02:31.061+0000] {standard_task_runner.py:57} INFO - Started process 228 to run task
+[2025-06-13T14:02:31.078+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'ecommerce_generate_product', 'check_brand_generator_success', 'scheduled__2025-06-01T00:00:00+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/generate_product.py', '--cfg-path', '/tmp/tmpw6jno7iw']
+[2025-06-13T14:02:31.084+0000] {standard_task_runner.py:85} INFO - Job 5: Subtask check_brand_generator_success
+[2025-06-13T14:02:31.492+0000] {task_command.py:415} INFO - Running <TaskInstance: ecommerce_generate_product.check_brand_generator_success scheduled__2025-06-01T00:00:00+00:00 [running]> on host ecb9ce2a98b4
+[2025-06-13T14:02:32.259+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='ecommerce_generate_product' AIRFLOW_CTX_TASK_ID='check_brand_generator_success' AIRFLOW_CTX_EXECUTION_DATE='2025-06-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-06-01T00:00:00+00:00'
+[2025-06-13T14:02:32.481+0000] {taskinstance.py:1935} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/generate_product.py", line 16, in check_if_brand_generated_success
+    raise AirflowException("Brand generator DAG run was not successful.")
+airflow.exceptions.AirflowException: Brand generator DAG run was not successful.
+[2025-06-13T14:02:32.497+0000] {taskinstance.py:1398} INFO - Marking task as UP_FOR_RETRY. dag_id=ecommerce_generate_product, task_id=check_brand_generator_success, execution_date=20250601T000000, start_date=20250613T140230, end_date=20250613T140232
+[2025-06-13T14:02:32.578+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 5 for task check_brand_generator_success (Brand generator DAG run was not successful.; 228)
+[2025-06-13T14:02:32.663+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2025-06-13T14:02:32.823+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-06-13T14:05:45.093+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ecommerce_generate_product.check_brand_generator_success scheduled__2025-06-01T00:00:00+00:00 [queued]>
+[2025-06-13T14:05:45.126+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ecommerce_generate_product.check_brand_generator_success scheduled__2025-06-01T00:00:00+00:00 [queued]>
+[2025-06-13T14:05:45.126+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 6
+[2025-06-13T14:05:45.178+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): check_brand_generator_success> on 2025-06-01 00:00:00+00:00
+[2025-06-13T14:05:45.195+0000] {standard_task_runner.py:57} INFO - Started process 227 to run task
+[2025-06-13T14:05:45.203+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'ecommerce_generate_product', 'check_brand_generator_success', 'scheduled__2025-06-01T00:00:00+00:00', '--job-id', '8', '--raw', '--subdir', 'DAGS_FOLDER/generate_product.py', '--cfg-path', '/tmp/tmprsh8yu31']
+[2025-06-13T14:05:45.208+0000] {standard_task_runner.py:85} INFO - Job 8: Subtask check_brand_generator_success
+[2025-06-13T14:05:45.450+0000] {task_command.py:415} INFO - Running <TaskInstance: ecommerce_generate_product.check_brand_generator_success scheduled__2025-06-01T00:00:00+00:00 [running]> on host a30c1c73f42f
+[2025-06-13T14:05:45.920+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='ecommerce_generate_product' AIRFLOW_CTX_TASK_ID='check_brand_generator_success' AIRFLOW_CTX_EXECUTION_DATE='2025-06-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-06-01T00:00:00+00:00'
+[2025-06-13T14:05:46.081+0000] {taskinstance.py:1935} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/generate_product.py", line 16, in check_if_brand_generated_success
+    raise AirflowException("Brand generator DAG run was not successful.")
+airflow.exceptions.AirflowException: Brand generator DAG run was not successful.
+[2025-06-13T14:05:46.106+0000] {taskinstance.py:1398} INFO - Marking task as UP_FOR_RETRY. dag_id=ecommerce_generate_product, task_id=check_brand_generator_success, execution_date=20250601T000000, start_date=20250613T140545, end_date=20250613T140546
+[2025-06-13T14:05:46.236+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 8 for task check_brand_generator_success (Brand generator DAG run was not successful.; 227)
+[2025-06-13T14:05:46.334+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2025-06-13T14:05:46.518+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-06-13T14:08:44.779+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ecommerce_generate_product.check_brand_generator_success scheduled__2025-06-01T00:00:00+00:00 [queued]>
+[2025-06-13T14:08:44.802+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ecommerce_generate_product.check_brand_generator_success scheduled__2025-06-01T00:00:00+00:00 [queued]>
+[2025-06-13T14:08:44.803+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 6
+[2025-06-13T14:08:44.837+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): check_brand_generator_success> on 2025-06-01 00:00:00+00:00
+[2025-06-13T14:08:44.849+0000] {standard_task_runner.py:57} INFO - Started process 226 to run task
+[2025-06-13T14:08:44.856+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'ecommerce_generate_product', 'check_brand_generator_success', 'scheduled__2025-06-01T00:00:00+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/generate_product.py', '--cfg-path', '/tmp/tmp9u76fynh']
+[2025-06-13T14:08:44.861+0000] {standard_task_runner.py:85} INFO - Job 6: Subtask check_brand_generator_success
+[2025-06-13T14:08:45.077+0000] {task_command.py:415} INFO - Running <TaskInstance: ecommerce_generate_product.check_brand_generator_success scheduled__2025-06-01T00:00:00+00:00 [running]> on host 3bda607c6347
+[2025-06-13T14:08:45.506+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='ecommerce_generate_product' AIRFLOW_CTX_TASK_ID='check_brand_generator_success' AIRFLOW_CTX_EXECUTION_DATE='2025-06-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-06-01T00:00:00+00:00'
+[2025-06-13T14:08:45.608+0000] {taskinstance.py:1935} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/generate_product.py", line 16, in check_if_brand_generated_success
+    raise AirflowException("Brand generator DAG run was not successful.")
+airflow.exceptions.AirflowException: Brand generator DAG run was not successful.
+[2025-06-13T14:08:45.617+0000] {taskinstance.py:1398} INFO - Marking task as UP_FOR_RETRY. dag_id=ecommerce_generate_product, task_id=check_brand_generator_success, execution_date=20250601T000000, start_date=20250613T140844, end_date=20250613T140845
+[2025-06-13T14:08:45.651+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 6 for task check_brand_generator_success (Brand generator DAG run was not successful.; 226)
+[2025-06-13T14:08:45.692+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2025-06-13T14:08:45.775+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-06-13T15:50:53.023+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ecommerce_generate_product.check_brand_generator_success scheduled__2025-06-01T00:00:00+00:00 [queued]>
+[2025-06-13T15:50:53.282+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ecommerce_generate_product.check_brand_generator_success scheduled__2025-06-01T00:00:00+00:00 [queued]>
+[2025-06-13T15:50:53.293+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 6
+[2025-06-13T15:50:53.488+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): check_brand_generator_success> on 2025-06-01 00:00:00+00:00
+[2025-06-13T15:50:53.512+0000] {standard_task_runner.py:57} INFO - Started process 230 to run task
+[2025-06-13T15:50:53.528+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'ecommerce_generate_product', 'check_brand_generator_success', 'scheduled__2025-06-01T00:00:00+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/generate_product.py', '--cfg-path', '/tmp/tmpp12e5q4x']
+[2025-06-13T15:50:53.536+0000] {standard_task_runner.py:85} INFO - Job 5: Subtask check_brand_generator_success
+[2025-06-13T15:50:53.922+0000] {task_command.py:415} INFO - Running <TaskInstance: ecommerce_generate_product.check_brand_generator_success scheduled__2025-06-01T00:00:00+00:00 [running]> on host 3498b866135e
+[2025-06-13T15:50:54.395+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='ecommerce_generate_product' AIRFLOW_CTX_TASK_ID='check_brand_generator_success' AIRFLOW_CTX_EXECUTION_DATE='2025-06-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-06-01T00:00:00+00:00'
+[2025-06-13T15:50:54.489+0000] {taskinstance.py:1935} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/generate_product.py", line 16, in check_if_brand_generated_success
+    raise AirflowException("Brand generator DAG run was not successful.")
+airflow.exceptions.AirflowException: Brand generator DAG run was not successful.
+[2025-06-13T15:50:54.496+0000] {taskinstance.py:1398} INFO - Marking task as UP_FOR_RETRY. dag_id=ecommerce_generate_product, task_id=check_brand_generator_success, execution_date=20250601T000000, start_date=20250613T155053, end_date=20250613T155054
+[2025-06-13T15:50:54.530+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 5 for task check_brand_generator_success (Brand generator DAG run was not successful.; 230)
+[2025-06-13T15:50:54.581+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2025-06-13T15:50:54.662+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,14 @@
+apiVersion: 1
+
+datasources:
+  - name: ClickHouse
+    type: grafana-clickhouse-datasource
+    uid: ecommerce_default_datasource
+    access: proxy
+    jsonData:
+      host: clickhouse
+      port: 9000
+      protocol: native
+      database: default
+      username: name1
+      tlsSkipVerify: true # Only use if you are not enabling TLS

@@ -1,0 +1,20 @@
+[2025-06-14T04:47:12.660+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ecommerce_generate_order_process.generate_order_process scheduled__2025-06-14T04:46:12.130199+00:00 [queued]>
+[2025-06-14T04:47:12.667+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ecommerce_generate_order_process.generate_order_process scheduled__2025-06-14T04:46:12.130199+00:00 [queued]>
+[2025-06-14T04:47:12.667+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 6
+[2025-06-14T04:47:12.678+0000] {taskinstance.py:1380} INFO - Executing <Task(_PythonDecoratedOperator): generate_order_process> on 2025-06-14 04:46:12.130199+00:00
+[2025-06-14T04:47:12.682+0000] {standard_task_runner.py:57} INFO - Started process 15751 to run task
+[2025-06-14T04:47:12.684+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'ecommerce_generate_order_process', 'generate_order_process', 'scheduled__2025-06-14T04:46:12.130199+00:00', '--job-id', '1264', '--raw', '--subdir', 'DAGS_FOLDER/generate_order_process.py', '--cfg-path', '/tmp/tmpeqb2jpdm']
+[2025-06-14T04:47:12.686+0000] {standard_task_runner.py:85} INFO - Job 1264: Subtask generate_order_process
+[2025-06-14T04:47:12.732+0000] {task_command.py:415} INFO - Running <TaskInstance: ecommerce_generate_order_process.generate_order_process scheduled__2025-06-14T04:46:12.130199+00:00 [running]> on host 3498b866135e
+[2025-06-14T04:47:12.817+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='ecommerce_generate_order_process' AIRFLOW_CTX_TASK_ID='generate_order_process' AIRFLOW_CTX_EXECUTION_DATE='2025-06-14T04:46:12.130199+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-06-14T04:46:12.130199+00:00'
+[2025-06-14T04:47:12.829+0000] {logging_mixin.py:151} INFO - ----------------------------
+[2025-06-14T04:47:12.829+0000] {logging_mixin.py:151} INFO - 304
+[2025-06-14T04:47:12.829+0000] {logging_mixin.py:151} INFO - ----------------------------
+[2025-06-14T04:47:12.835+0000] {logging_mixin.py:151} INFO - [(5, 8, Decimal('699.65'), Decimal('8.21'), Decimal('459.530120')), (37, 7, Decimal('892.19'), Decimal('4.68'), Decimal('292.281444')), (23, 1, Decimal('521.30'), Decimal('16.80'), Decimal('87.57840')), (18, 9, Decimal('697.86'), Decimal('6.91'), Decimal('433.999134')), (40, 4, Decimal('700.78'), Decimal('16.51'), Decimal('462.795112')), (1, 1, Decimal('802.42'), Decimal('3.53'), Decimal('28.325426')), (14, 5, Decimal('657.33'), Decimal('0.13'), Decimal('4.272645'))]
+[2025-06-14T04:47:12.836+0000] {logging_mixin.py:151} INFO - [(248, 5, 8, Decimal('699.65'), Decimal('8.21'), Decimal('459.530120')), (248, 37, 7, Decimal('892.19'), Decimal('4.68'), Decimal('292.281444')), (248, 23, 1, Decimal('521.30'), Decimal('16.80'), Decimal('87.57840')), (248, 18, 9, Decimal('697.86'), Decimal('6.91'), Decimal('433.999134')), (248, 40, 4, Decimal('700.78'), Decimal('16.51'), Decimal('462.795112')), (248, 1, 1, Decimal('802.42'), Decimal('3.53'), Decimal('28.325426')), (248, 14, 5, Decimal('657.33'), Decimal('0.13'), Decimal('4.272645'))]
+[2025-06-14T04:47:12.838+0000] {logging_mixin.py:151} INFO - Simulation completed successfully!
+[2025-06-14T04:47:12.838+0000] {logging_mixin.py:151} INFO - 248
+[2025-06-14T04:47:12.839+0000] {python.py:194} INFO - Done. Returned value was: 248
+[2025-06-14T04:47:12.867+0000] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=ecommerce_generate_order_process, task_id=generate_order_process, execution_date=20250614T044612, start_date=20250614T044712, end_date=20250614T044712
+[2025-06-14T04:47:12.896+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-06-14T04:47:12.918+0000] {taskinstance.py:2776} INFO - 1 downstream tasks scheduled from follow-on schedule check

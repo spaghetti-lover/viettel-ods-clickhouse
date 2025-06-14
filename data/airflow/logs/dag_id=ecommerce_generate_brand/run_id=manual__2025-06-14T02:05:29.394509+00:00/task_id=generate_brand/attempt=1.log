@@ -1,0 +1,13 @@
+[2025-06-14T02:05:30.886+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ecommerce_generate_brand.generate_brand manual__2025-06-14T02:05:29.394509+00:00 [queued]>
+[2025-06-14T02:05:30.897+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ecommerce_generate_brand.generate_brand manual__2025-06-14T02:05:29.394509+00:00 [queued]>
+[2025-06-14T02:05:30.897+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 4
+[2025-06-14T02:05:30.911+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): generate_brand> on 2025-06-14 02:05:29.394509+00:00
+[2025-06-14T02:05:30.918+0000] {standard_task_runner.py:57} INFO - Started process 1486 to run task
+[2025-06-14T02:05:30.921+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'ecommerce_generate_brand', 'generate_brand', 'manual__2025-06-14T02:05:29.394509+00:00', '--job-id', '454', '--raw', '--subdir', 'DAGS_FOLDER/generate_brand.py', '--cfg-path', '/tmp/tmpo8qlulwe']
+[2025-06-14T02:05:30.923+0000] {standard_task_runner.py:85} INFO - Job 454: Subtask generate_brand
+[2025-06-14T02:05:30.996+0000] {task_command.py:415} INFO - Running <TaskInstance: ecommerce_generate_brand.generate_brand manual__2025-06-14T02:05:29.394509+00:00 [running]> on host 3498b866135e
+[2025-06-14T02:05:31.143+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='ecommerce_generate_brand' AIRFLOW_CTX_TASK_ID='generate_brand' AIRFLOW_CTX_EXECUTION_DATE='2025-06-14T02:05:29.394509+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-14T02:05:29.394509+00:00'
+[2025-06-14T02:05:31.222+0000] {python.py:194} INFO - Done. Returned value was: None
+[2025-06-14T02:05:31.241+0000] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=ecommerce_generate_brand, task_id=generate_brand, execution_date=20250614T020529, start_date=20250614T020530, end_date=20250614T020531
+[2025-06-14T02:05:31.293+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-06-14T02:05:31.329+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check
