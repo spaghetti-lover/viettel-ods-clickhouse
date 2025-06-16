@@ -1,3 +1,7 @@
+-- Create user
+CREATE USER name1 IDENTIFIED WITH no_password;
+GRANT SELECT, INSERT, UPDATE, DELETE, ALTER, CREATE, DROP ON *.* TO name1;
+
 -- Transactions Table and Materialized View ------------------------------
 USE default;
 CREATE TABLE IF NOT EXISTS transactions (
@@ -633,8 +637,7 @@ ORDER BY category_name;
 CREATE TABLE IF NOT EXISTS _at_total_sales_per_user (
     user_id UInt64,
     total_amount Decimal(15, 2)
-)
-ENGINE = SummingMergeTree(total_amount)
+) ENGINE = SummingMergeTree(total_amount)
 ORDER BY user_id;
 -- Create a materialized view "_mv_at_total_sales_per_user" to aggregate total sales per user.
 -- The view selects data from the "orders" table, extracting user IDs and total amounts.
@@ -745,7 +748,7 @@ GROUP BY province_name;
 -- Data is aggregated by city name, with the total number of products sold stored in the "total_sold" column.
 -- The table is ordered by total number of products sold and then by city name for faster retrieval and sequential access.
 CREATE TABLE IF NOT EXISTS _at_total_number_of_products_sold_by_city (city_name String, total_sold UInt32) ENGINE SummingMergeTree((total_sold))
-ORDER BY (total_sold, city_name);
+ORDER BY city_name;
 -- Create a materialized view to aggregate the total number of products sold by city.
 -- The view "_mv_at_total_number_of_products_sold_by_city" aggregates data from the "orderdetails" table.
 -- Data is joined with the "orders", "addresses", and "cities" tables to retrieve city names.
