@@ -9,13 +9,13 @@ Dự án này được dùng để so sánh với StarRocks: [https://github.com
 1. Mở terminal
 2. Clone dự án:
 ```
-https://github.com/spaghetti-lover/viettel-ods-starrocks.git
+https://github.com/spaghetti-lover/viettel-ods-clickhouse.git
 ```
-**Bước 5: Truy cập vào các service**
+
 **Bước 2: Vào dự án**
 1. Vào thư mục gốc của dự án:
 ```
-cd viettel-ods-starrocks
+cd viettel-ods-clickhouseclickhouse
 ```
 
 **Bước 3: Chạy Docker Containers**
