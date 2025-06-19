@@ -4,6 +4,7 @@
 Dự án này được dùng để so sánh với StarRocks: [https://github.com/spaghetti-lover/viettel-ods-](https://github.com/spaghetti-lover/viettel-ods-starrocks)
 ## Cách chạy:
 **Điều kiện**: Cài đặt Docker và docker-compose
+
 **Bước 1: Clone dự án**:
 1. Mở terminal
 2. Clone dự án:
