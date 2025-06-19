@@ -15,7 +15,7 @@ https://github.com/spaghetti-lover/viettel-ods-clickhouse.git
 **Bước 2: Vào dự án**
 1. Vào thư mục gốc của dự án:
 ```
-cd viettel-ods-clickhouseclickhouse
+cd viettel-ods-clickhouse
 ```
 
 **Bước 3: Chạy Docker Containers**
