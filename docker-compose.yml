@@ -271,9 +271,6 @@ services:
     depends_on:
       - clickhouse
     volumes:
-      # - ./data/grafana/logs:/var/log/grafana
-      # - ./data/grafana/provisioning:/etc/grafana/provisioning
-      # - ./data/grafana/grafana.ini:/etc/grafana/grafana.ini
       - ./dashboard/grafana/provisioning:/etc/grafana/provisioning
       - ./data/grafana/plugins:/var/lib/grafana/plugins
       - ./data/grafana/data:/var/lib/grafana

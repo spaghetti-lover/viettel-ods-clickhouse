@@ -1,7 +1,12 @@
 -- Create user
 CREATE USER name1 IDENTIFIED WITH no_password;
-GRANT SELECT, INSERT, UPDATE, DELETE, ALTER, CREATE, DROP ON *.* TO name1;
-
+GRANT SELECT,
+    INSERT,
+    UPDATE,
+    DELETE,
+    ALTER,
+    CREATE,
+    DROP ON *.* TO name1;
 -- Transactions Table and Materialized View ------------------------------
 USE default;
 CREATE TABLE IF NOT EXISTS transactions (
